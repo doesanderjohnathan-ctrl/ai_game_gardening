@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Clicker Game 🌱</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌱 Garden Clicker Game</h1>
+            <div class="stats">
+                <div class="stat">
+                    <span class="label">Coins:</span>
+                    <span class="value" id="coins">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Grid Size:</span>
+                    <span class="value" id="gridSize">1x1</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Plants:</span>
+                    <span class="value" id="plantCount">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-area">
+                <!-- Garden Grid -->
+                <div class="garden-section">
+                    <h2>Your Garden</h2>
+                    <div class="grid" id="garden-grid"></div>
+                </div>
+
+                <!-- Shop -->
+                <div class="shop-section">
+                    <h2>Shop</h2>
+                    <div class="shop-tabs">
+                        <button class="tab-btn active" data-tab="expansions">Expansions</button>
+                        <button class="tab-btn" data-tab="plants">Plants</button>
+                        <button class="tab-btn" data-tab="mutations">Mutations</button>
+                    </div>
+
+                    <div class="tab-content">
+                        <!-- Expansions Tab -->
+                        <div id="expansions" class="tab active">
+                            <div class="shop-item">
+                                <h3>Expand Grid</h3>
+                                <p id="expansionDesc">Expand your garden from 1×1 to 2×2</p>
+                                <button class="buy-btn" id="expand-btn">Cost: <span id="expansionCost">10</span> 🪙</button>
+                            </div>
+                        </div>
+
+                        <!-- Plants Tab -->
+                        <div id="plants" class="tab">
+                            <div id="plants-shop" class="shop-grid"></div>
+                        </div>
+
+                        <!-- Mutations Tab -->
+                        <div id="mutations" class="tab">
+                            <div id="mutations-shop" class="shop-grid"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plant Guide -->
+                <div class="guide-section">
+                    <h2>Plant Guide</h2>
+                    <div id="plant-guide"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Plant, grow, harvest, and expand your garden! 🌻</p>
+            <button id="reset-btn" class="reset-btn">Reset Game</button>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
